@@ -1,0 +1,78 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+  theme: {
+    extend: {
+      fontFamily: {
+        display: ['"Fraunces"', 'Georgia', 'serif'],
+        body: ['"DM Sans"', 'system-ui', 'sans-serif'],
+        mono: ['"DM Mono"', 'monospace'],
+      },
+      colors: {
+        sage: {
+          50:  '#f4f8f4',
+          100: '#e2ede2',
+          200: '#c4dac5',
+          300: '#9cc19e',
+          400: '#6fa372',
+          500: '#4d8551',
+          600: '#3a6a3e',
+          700: '#2f5532',
+          800: '#274429',
+          900: '#203823',
+        },
+        sky: {
+          50:  '#f0f7ff',
+          100: '#e0effe',
+          200: '#baddfd',
+          300: '#7ec3fb',
+          400: '#3aa4f7',
+          500: '#1087e8',
+          600: '#046bc6',
+          700: '#0455a0',
+          800: '#074884',
+          900: '#0c3d6e',
+        },
+        sand: {
+          50:  '#fdf8f0',
+          100: '#f8eeda',
+          200: '#f0d9ad',
+          300: '#e6bf78',
+          400: '#daa34a',
+          500: '#cd8c2f',
+          600: '#b47225',
+          700: '#935921',
+          800: '#784823',
+          900: '#633d21',
+        },
+        mist: {
+          50:  '#f8f9fb',
+          100: '#f1f3f7',
+          200: '#e4e8ef',
+          300: '#cdd4e0',
+          400: '#b0bccc',
+          500: '#8d9db5',
+          600: '#6d7e99',
+          700: '#576880',
+          800: '#495669',
+          900: '#3f4a58',
+        },
+      },
+      borderRadius: {
+        '4xl': '2rem',
+        '5xl': '3rem',
+      },
+      boxShadow: {
+        'soft': '0 4px 32px 0 rgba(79, 115, 95, 0.08)',
+        'soft-lg': '0 8px 48px 0 rgba(79, 115, 95, 0.12)',
+        'card': '0 2px 16px 0 rgba(60, 80, 100, 0.07)',
+      },
+      spacing: {
+        '18': '4.5rem',
+        '22': '5.5rem',
+        '30': '7.5rem',
+      },
+    },
+  },
+  plugins: [],
+};

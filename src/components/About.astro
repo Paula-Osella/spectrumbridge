@@ -1,0 +1,114 @@
+---
+---
+<section
+  id="about"
+  class="py-24 lg:py-32 bg-white"
+  aria-labelledby="about-heading"
+>
+  <div class="max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+
+    <!-- Image collage -->
+    <div class="relative order-2 lg:order-1" data-aos="fade-right">
+      <div class="grid grid-cols-2 gap-4">
+        <div class="space-y-4">
+          <div class="rounded-3xl overflow-hidden shadow-card h-56">
+            <img
+              src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=500&q=80&auto=format&fit=crop"
+              alt="A diverse group of people collaborating in a calm environment"
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+              width="500"
+              height="350"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="rounded-3xl overflow-hidden shadow-card h-40">
+            <img
+              src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=500&q=80&auto=format&fit=crop"
+              alt="Close up of hands working with sensory objects"
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+              width="500"
+              height="250"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+        <div class="space-y-4 mt-8">
+          <div class="rounded-3xl overflow-hidden shadow-card h-40">
+            <img
+              src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=500&q=80&auto=format&fit=crop"
+              alt="A person smiling while using a tablet device"
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+              width="500"
+              height="250"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="rounded-3xl overflow-hidden shadow-card h-56">
+            <img
+              src="https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?w=500&q=80&auto=format&fit=crop"
+              alt="A warm, well-lit room with comfortable seating"
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+              width="500"
+              height="350"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Decorative element -->
+      <div class="absolute -bottom-6 -right-6 w-32 h-32 rounded-full bg-sage-100 -z-10" aria-hidden="true"></div>
+      <div class="absolute -top-6 -left-6 w-20 h-20 rounded-full bg-sky-100 -z-10" aria-hidden="true"></div>
+    </div>
+
+    <!-- Text content -->
+    <div class="order-1 lg:order-2" data-aos="fade-left">
+      <div class="section-label">About Us</div>
+
+      <h2
+        id="about-heading"
+        class="font-display text-4xl md:text-5xl font-light text-mist-900 mb-6"
+      >
+        Built by people who
+        <em class="text-sage-500 not-italic"> understand</em>.
+      </h2>
+
+      <div class="space-y-5 text-mist-600 leading-relaxed">
+        <p>
+          SpectrumBridge was created alongside autistic individuals, families, and specialists
+          who know firsthand that the right support changes everything. We believe
+          integration means more than access — it means belonging.
+        </p>
+        <p>
+          Our platform adapts to sensory preferences, communication styles, and personal
+          goals. Whether you are navigating education, work, community, or daily life,
+          we meet you exactly where you are.
+        </p>
+        <p>
+          We hold ourselves to a simple standard: <strong class="font-semibold text-mist-800">
+          nothing about us, without us.</strong> Every decision we make is guided by
+          the community we serve.
+        </p>
+      </div>
+
+      <!-- Stats row -->
+      <div class="mt-10 grid grid-cols-3 gap-6" role="list" aria-label="Key statistics">
+        {[
+          { value: '12K+', label: 'People Supported' },
+          { value: '200+', label: 'Partner Organizations' },
+          { value: '6 yrs', label: 'Of Experience' },
+        ].map(stat => (
+          <div class="text-center" role="listitem">
+            <p class="font-display text-3xl font-light text-sage-600">{stat.value}</p>
+            <p class="text-xs text-mist-500 mt-1 font-medium">{stat.label}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+  </div>
+</section>

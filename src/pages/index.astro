@@ -1,0 +1,37 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+import HowItWorks from '../components/HowItWorks.astro';
+import Benefits from '../components/Benefits.astro';
+import Testimonials from '../components/Testimonials.astro';
+import CTA from '../components/CTA.astro';
+import Footer from '../components/Footer.astro';
+---
+<Layout
+  title="SpectrumBridge — Inclusive Integration for the Autistic Community"
+  description="SpectrumBridge helps autistic individuals, families, and organizations connect with the right resources, people, and environments — at their own pace, in their own way."
+>
+  <a
+    href="#main-content"
+    class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 z-[100]
+      bg-sage-500 text-white px-6 py-3 rounded-full font-medium text-sm
+      focus:outline-none focus:ring-2 focus:ring-sage-300"
+  >
+    Skip to main content
+  </a>
+
+  <Navbar />
+
+  <main id="main-content">
+    <Hero />
+    <About />
+    <HowItWorks />
+    <Benefits />
+    <Testimonials />
+    <CTA />
+  </main>
+
+  <Footer />
+</Layout>

@@ -1,0 +1,103 @@
+---
+const steps = [
+  {
+    number: '01',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+    </svg>`,
+    title: 'Share Your Story',
+    description:
+      'Complete a gentle, low-pressure intake at your own pace. Tell us what matters most to you — your goals, preferences, and what kind of support feels right.',
+  },
+  {
+    number: '02',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+    </svg>`,
+    title: 'Receive Your Plan',
+    description:
+      'Our specialists craft a personalized integration roadmap that matches your environment, communication style, and the areas where you want to grow.',
+  },
+  {
+    number: '03',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+    </svg>`,
+    title: 'Connect with Support',
+    description:
+      'Get matched with vetted specialists, peer mentors, and community groups who truly get it. Connections are always optional and always at your pace.',
+  },
+  {
+    number: '04',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+    </svg>`,
+    title: 'Grow & Adjust',
+    description:
+      'Track your progress with tools designed for neurodiversity. Your plan evolves as you do — no pressure, no rigid timelines.',
+  },
+];
+---
+<section
+  id="how-it-works"
+  class="py-24 lg:py-32 bg-sage-50"
+  aria-labelledby="how-heading"
+>
+  <div class="max-w-7xl mx-auto px-6 lg:px-12">
+
+    <!-- Section header -->
+    <div class="max-w-xl mb-16 lg:mb-20">
+      <div class="section-label" data-aos="fade-down">How It Works</div>
+      <h2
+        id="how-heading"
+        class="font-display text-4xl md:text-5xl font-light text-mist-900"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
+        Simple steps,
+        <em class="text-sage-500 not-italic"> meaningful change.</em>
+      </h2>
+    </div>
+
+    <!-- Steps grid -->
+    <ol class="grid md:grid-cols-2 lg:grid-cols-4 gap-6" role="list">
+      {steps.map((step, i) => (
+        <li
+          class="card relative group"
+          data-aos="fade-up"
+          data-aos-delay={i * 80}
+        >
+          <!-- Step number (decorative) -->
+          <span class="step-number select-none" aria-hidden="true">{step.number}</span>
+
+          <!-- Icon -->
+          <div
+            class="mt-4 mb-5 w-12 h-12 rounded-2xl bg-sage-100 text-sage-600
+              flex items-center justify-center
+              group-hover:bg-sage-500 group-hover:text-white
+              transition-all duration-300"
+            aria-hidden="true"
+          >
+            <Fragment set:html={step.icon} />
+          </div>
+
+          <h3 class="font-display text-xl font-medium text-mist-900 mb-3">
+            {step.title}
+          </h3>
+          <p class="text-mist-600 text-sm leading-relaxed">
+            {step.description}
+          </p>
+
+          <!-- Connector line (desktop only) -->
+          {i < steps.length - 1 && (
+            <div
+              class="hidden lg:block absolute top-10 -right-3 w-6 h-px bg-sage-200"
+              aria-hidden="true"
+            ></div>
+          )}
+        </li>
+      ))}
+    </ol>
+
+  </div>
+</section>

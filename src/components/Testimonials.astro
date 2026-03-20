@@ -1,0 +1,118 @@
+---
+const testimonials = [
+  {
+    quote:
+      "I had tried so many things before SpectrumBridge. What is different here is that they actually listen — they did not try to fix me. They helped me find the strategies that work for my brain.",
+    name: 'Jordan M.',
+    role: 'Autistic adult, age 27',
+    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80&auto=format&fit=crop&face',
+    rating: 5,
+  },
+  {
+    quote:
+      "As a parent, I was overwhelmed. SpectrumBridge gave us a clear path and connected us with the right people. My daughter now has tools she actually uses — and she is thriving.",
+    name: 'Maria T.',
+    role: 'Parent of an 11-year-old',
+    avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80&auto=format&fit=crop&face',
+    rating: 5,
+  },
+  {
+    quote:
+      "We implemented SpectrumBridge across our school district. Staff confidence went up, incidents went down, and students are more engaged. It genuinely transforms how we support our students.",
+    name: 'David L.',
+    role: 'Special Education Director',
+    avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80&auto=format&fit=crop&face',
+    rating: 5,
+  },
+  {
+    quote:
+      "The sensory profile tool alone changed how I understand myself. I did not realize how much my environment was affecting me until I had the words to describe it.",
+    name: 'Alex R.',
+    role: 'Autistic adult, age 34',
+    avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&q=80&auto=format&fit=crop&face',
+    rating: 5,
+  },
+];
+---
+<section
+  id="testimonials"
+  class="py-24 lg:py-32 bg-mist-50 overflow-hidden"
+  aria-labelledby="testimonials-heading"
+>
+  <div class="max-w-7xl mx-auto px-6 lg:px-12">
+
+    <!-- Header -->
+    <div class="max-w-xl mb-16">
+      <div class="section-label" data-aos="fade-down">Testimonials</div>
+      <h2
+        id="testimonials-heading"
+        class="font-display text-4xl md:text-5xl font-light text-mist-900"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
+        Stories from our
+        <em class="text-sage-500 not-italic"> community.</em>
+      </h2>
+    </div>
+
+    <!-- Testimonials grid -->
+    <ul class="grid md:grid-cols-2 gap-6" role="list">
+      {testimonials.map((t, i) => (
+        <li
+          class="card group"
+          data-aos="fade-up"
+          data-aos-delay={i * 80}
+        >
+          <!-- Stars -->
+          <div class="flex gap-1 mb-5" role="img" aria-label={`${t.rating} out of 5 stars`}>
+            {Array.from({ length: t.rating }).map(() => (
+              <svg class="w-4 h-4 text-sand-400 fill-current" viewBox="0 0 20 20" aria-hidden="true">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+              </svg>
+            ))}
+          </div>
+
+          <!-- Quote -->
+          <blockquote class="mb-6">
+            <p class="text-mist-700 leading-relaxed text-base italic">
+              &ldquo;{t.quote}&rdquo;
+            </p>
+          </blockquote>
+
+          <!-- Author -->
+          <div class="flex items-center gap-3 mt-auto pt-5 border-t border-mist-100">
+            <img
+              src={t.avatar}
+              alt={`${t.name}'s profile photo`}
+              class="w-10 h-10 rounded-full object-cover ring-2 ring-sage-100"
+              width="40"
+              height="40"
+              loading="lazy"
+              decoding="async"
+            />
+            <div>
+              <p class="font-semibold text-mist-900 text-sm">{t.name}</p>
+              <p class="text-mist-400 text-xs">{t.role}</p>
+            </div>
+          </div>
+        </li>
+      ))}
+    </ul>
+
+    <!-- Logos row -->
+    <div
+      class="mt-20 text-center"
+      data-aos="fade-up"
+    >
+      <p class="text-sm font-medium text-mist-400 mb-8 tracking-wider uppercase">
+        Trusted by organizations including
+      </p>
+      <div class="flex flex-wrap justify-center items-center gap-10 opacity-40 grayscale" aria-label="Partner organizations">
+        {['National Autism Society', 'EduCare Network', 'BrightPath Clinics', 'Inclusive Schools Coalition', 'Neuro-Affirming Alliance'].map(org => (
+          <span class="font-display text-lg font-medium text-mist-700">{org}</span>
+        ))}
+      </div>
+    </div>
+
+  </div>
+</section>

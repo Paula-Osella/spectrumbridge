@@ -1,0 +1,103 @@
+---
+const footerLinks = {
+  Platform: ['How It Works', 'Benefits', 'For Organizations', 'For Schools', 'Pricing'],
+  Support: ['Help Center', 'Accessibility Guide', 'Community Forum', 'Contact Us', 'Crisis Resources'],
+  Company: ['About Us', 'Our Team', 'Advisors', 'Press', 'Careers'],
+  Legal: ['Privacy Policy', 'Terms of Service', 'Cookie Policy', 'Accessibility Statement'],
+};
+---
+<footer class="bg-mist-900 text-mist-300" role="contentinfo">
+
+  <!-- Main footer -->
+  <div class="max-w-7xl mx-auto px-6 lg:px-12 py-16 lg:py-20">
+    <div class="grid lg:grid-cols-5 gap-12">
+
+      <!-- Brand column -->
+      <div class="lg:col-span-2">
+        <a href="#" class="flex items-center gap-3 mb-6 group" aria-label="SpectrumBridge home">
+          <div class="w-9 h-9 rounded-xl bg-sage-500 flex items-center justify-center">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="10" cy="10" r="3" fill="white" opacity="0.9"/>
+              <path d="M10 3C10 3 4 6 4 10C4 14 10 17 10 17" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+              <path d="M10 3C10 3 16 6 16 10C16 14 10 17 10 17" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+            </svg>
+          </div>
+          <span class="font-display text-xl font-semibold text-white">
+            Spectrum<span class="text-sage-400">Bridge</span>
+          </span>
+        </a>
+
+        <p class="text-sm leading-relaxed max-w-xs mb-8">
+          An inclusive integration platform designed with and for the autistic community.
+          Calm. Clear. Always on your terms.
+        </p>
+
+        <!-- Social links -->
+        <div class="flex gap-3" aria-label="Social media links">
+          {[
+            { label: 'Twitter / X', icon: `<path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>` },
+            { label: 'Instagram', icon: `<rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>` },
+            { label: 'LinkedIn', icon: `<path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>` },
+          ].map(social => (
+            <a
+              href="#"
+              aria-label={social.label}
+              class="w-9 h-9 rounded-xl bg-mist-800 flex items-center justify-center text-mist-400
+                hover:bg-sage-600 hover:text-white transition-all duration-200"
+            >
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                <Fragment set:html={social.icon} />
+              </svg>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <!-- Link columns -->
+      {Object.entries(footerLinks).map(([category, links]) => (
+        <nav aria-label={`${category} links`}>
+          <h3 class="text-white text-xs font-semibold tracking-widest uppercase mb-5 font-mono">
+            {category}
+          </h3>
+          <ul class="space-y-3" role="list">
+            {links.map(link => (
+              <li>
+                <a
+                  href="#"
+                  class="text-sm hover:text-sage-300 transition-colors duration-200 focus-visible:text-sage-300"
+                >
+                  {link}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      ))}
+    </div>
+  </div>
+
+  <!-- Bottom bar -->
+  <div class="border-t border-mist-800">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 py-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+      <p class="text-xs text-mist-500">
+        &copy; {new Date().getFullYear()} SpectrumBridge Inc. All rights reserved.
+      </p>
+      <div class="flex items-center gap-2 text-xs text-mist-500">
+        <svg class="w-4 h-4 text-sage-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+          <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/>
+        </svg>
+        Made with care for the neurodiverse community
+      </div>
+      <div class="flex items-center gap-1">
+        <span class="text-xs text-mist-500 mr-2">Accessibility:</span>
+        <a
+          href="#"
+          class="text-xs px-2.5 py-1 rounded-md bg-sage-600/30 text-sage-300 hover:bg-sage-600/50 transition-colors"
+          aria-label="Accessibility statement — WCAG 2.2 AA compliant"
+        >
+          WCAG 2.2 AA
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>

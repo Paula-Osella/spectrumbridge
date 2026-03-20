@@ -1,0 +1,137 @@
+---
+const benefits = [
+  {
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+    </svg>`,
+    color: 'bg-sand-50 text-sand-500',
+    title: 'Sensory-Aware Design',
+    description:
+      'Every interface element — from colors to transitions — is designed to minimize sensory overload and support focus.',
+  },
+  {
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+    </svg>`,
+    color: 'bg-sky-50 text-sky-500',
+    title: 'Flexible Communication',
+    description:
+      'Text, visual supports, voice — choose how you communicate. We work with AAC, written messages, and everything between.',
+  },
+  {
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+    </svg>`,
+    color: 'bg-sage-50 text-sage-500',
+    title: 'Safe & Confidential',
+    description:
+      'Your data is private, your pace is respected. No judgment, no pressure. You are always in control of your information.',
+  },
+  {
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+    </svg>`,
+    color: 'bg-mist-50 text-mist-500',
+    title: 'Peer Community',
+    description:
+      'Connect with others who get it. Optional peer groups, mentorships, and forums moderated with care and clear community norms.',
+  },
+  {
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+    </svg>`,
+    color: 'bg-sand-50 text-sand-500',
+    title: 'Specialist Access',
+    description:
+      'Access vetted occupational therapists, speech pathologists, psychologists, and coaches — all screened for neurodiversity-affirming practice.',
+  },
+  {
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+    </svg>`,
+    color: 'bg-sky-50 text-sky-500',
+    title: 'Works Everywhere',
+    description:
+      'Web, tablet, and mobile — optimized for assistive technologies including screen readers, keyboard navigation, and high-contrast modes.',
+  },
+];
+---
+<section
+  id="benefits"
+  class="py-24 lg:py-32 bg-white"
+  aria-labelledby="benefits-heading"
+>
+  <div class="max-w-7xl mx-auto px-6 lg:px-12">
+
+    <!-- Header -->
+    <div class="grid lg:grid-cols-2 gap-10 items-end mb-16 lg:mb-20">
+      <div>
+        <div class="section-label" data-aos="fade-down">Benefits</div>
+        <h2
+          id="benefits-heading"
+          class="font-display text-4xl md:text-5xl font-light text-mist-900"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          Support that
+          <em class="text-sage-500 not-italic"> fits you</em>,<br/>
+          not the other way around.
+        </h2>
+      </div>
+      <p
+        class="text-mist-600 leading-relaxed text-lg"
+        data-aos="fade-up"
+        data-aos-delay="150"
+      >
+        We designed SpectrumBridge to remove barriers, not add them. Everything here
+        was built with the autistic community — and for it.
+      </p>
+    </div>
+
+    <!-- Benefits grid -->
+    <ul class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" role="list">
+      {benefits.map((b, i) => (
+        <li
+          class="card group cursor-default"
+          data-aos="fade-up"
+          data-aos-delay={i * 60}
+        >
+          <div
+            class={`w-12 h-12 rounded-2xl flex items-center justify-center mb-5 ${b.color}
+              group-hover:scale-110 transition-transform duration-300`}
+            aria-hidden="true"
+          >
+            <Fragment set:html={b.icon} />
+          </div>
+          <h3 class="font-display text-lg font-medium text-mist-900 mb-2">{b.title}</h3>
+          <p class="text-mist-500 text-sm leading-relaxed">{b.description}</p>
+        </li>
+      ))}
+    </ul>
+
+    <!-- Image strip -->
+    <div
+      class="mt-20 rounded-4xl overflow-hidden shadow-soft relative h-64 md:h-80"
+      data-aos="fade-up"
+    >
+      <img
+        src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1600&q=80&auto=format&fit=crop"
+        alt="A diverse team collaborating in a bright, inclusive workspace"
+        class="w-full h-full object-cover"
+        width="1600"
+        height="500"
+        loading="lazy"
+        decoding="async"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-sage-900/60 to-transparent flex items-center" aria-hidden="false">
+        <div class="px-10 md:px-16 max-w-xl">
+          <p class="text-white font-display text-2xl md:text-3xl font-light leading-snug">
+            "SpectrumBridge helped our whole family breathe again."
+          </p>
+          <p class="text-sage-200 text-sm mt-4 font-medium">— Parent of a 14-year-old</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
