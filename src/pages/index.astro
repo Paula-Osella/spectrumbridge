@@ -9,10 +9,12 @@ import Testimonials from '../components/Testimonials.astro';
 import CTA from '../components/CTA.astro';
 import Footer from '../components/Footer.astro';
 ---
+
 <Layout
   title="SpectrumBridge — Inclusive Integration for the Autistic Community"
   description="SpectrumBridge helps autistic individuals, families, and organizations connect with the right resources, people, and environments — at their own pace, in their own way."
 >
+
   <a
     href="#main-content"
     class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 z-[100]
@@ -34,4 +36,30 @@ import Footer from '../components/Footer.astro';
   </main>
 
   <Footer />
+
+  <!-- BOTÓN FLOTANTE iMESSAGE -->
+  <a
+    href="sms:+5493511234567"
+    class="fixed bottom-6 right-6 z-[9999] w-14 h-14 rounded-full shadow-lg
+           flex items-center justify-center
+           bg-black hover:bg-zinc-800 transition-all duration-300
+           hover:scale-110"
+    aria-label="Enviar mensaje"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="w-7 h-7 text-white"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      stroke-width="2"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M8 10h8M8 14h5m9-2a9 9 0 11-18 0 9 9 0 0118 0z"
+      />
+    </svg>
+  </a>
+
 </Layout>
